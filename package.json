@@ -1,0 +1,22 @@
+{
+  "name": "threejs_demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanaltair/threejs_demos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanaltair/threejs_demos/issues"
+  },
+  "homepage": "https://github.com/ryanaltair/threejs_demos#readme",
+  "dependencies": {
+    "three": "^0.115.0"
+  }
+}
