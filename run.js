@@ -11,7 +11,7 @@ import { RenderPass } from './node_modules/three/examples/jsm/postprocessing/Ren
 import { UnrealBloomPass } from './node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js'
 
 var scene, camera, controls, pointLight, stats
-var composer, renderer, mixer
+var composer, renderer
 
 var params = {
   exposure: 1,
@@ -20,7 +20,6 @@ var params = {
   bloomRadius: 0
 }
 
-var clock = new THREE.Clock()
 var container = document.getElementById('container')
 
 stats = new Stats()
@@ -65,10 +64,6 @@ new GLTFLoader().load('assets/gearbox/scene.gltf', function (gltf) {
 
   scene.add(model)
 
-//   mixer = new THREE.AnimationMixer(model)
-//   var clip = gltf.animations[0]
-//   mixer.clipAction(clip.optimize()).play()
-
   animate()
 })
 
@@ -103,10 +98,6 @@ window.onresize = function () {
 
 function animate () {
   requestAnimationFrame(animate)
-
-  const delta = clock.getDelta()
-
-  mixer.update(delta)
 
   stats.update()
 
